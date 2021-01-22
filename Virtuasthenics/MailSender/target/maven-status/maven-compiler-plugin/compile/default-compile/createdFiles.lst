@@ -1,0 +1,5 @@
+es/sidelab/MailSender/controller/WebController.class
+es/sidelab/MailSender/App.class
+es/sidelab/MailSender/controller/MailController.class
+es/sidelab/MailSender/model/Email.class
+es/sidelab/MailSender/utils/SmtpMailSender.class
