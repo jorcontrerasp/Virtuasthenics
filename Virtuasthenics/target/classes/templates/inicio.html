@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+	<title>Virtuasthenics</title>
+	<link rel="stylesheet" type="text/css" href="css/inicio.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<nav class="navbar fixed-top navbar-expand-md top-nav">
+		<div class="container">
+			<a class="navbar-brand" href="/"><strong>Virtuasthenics</strong></a>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item active"><a class="nav-link" href="/">Inicio</a></li>
+					<li class="nav-item"><a class="nav-link" href="/actividades">Actividades</a></li>
+					<li class="nav-item"><a class="nav-link" href="/entrenamientos">Entrenamientos</a></li>
+					<li class="nav-item"><a class="nav-link" href="/dietas">Dietas</a></li>
+<!-- 					<li class="nav-item"><a class="nav-link" href="#">Precios</a></li> -->
+<!-- 					<li class="nav-item"><a class="nav-link" href="#">FAQ's</a></li> -->
+					<li class="nav-item"><a class="nav-link" href="/contacto">Contacto</a></li>
+				</ul>
+				&nbsp;
+				&nbsp;
+				&nbsp;
+				{{#showInfoUser}}
+				<div class="navbar-user">
+					<table>
+						<tr>
+							<td>
+								<p id="userNameField" style="color: #FFFFFF; margin-bottom: 25px;">
+									<u>
+										Usuario: {{user}}
+									</u>
+								</p>
+							</td>
+							&nbsp;
+							<td>
+								<form action="/usuario" method="get">
+									<button type="submit" style="margin-bottom: 25px;"><img src="icons/user.png" width="20px" height="20px"/></button>
+									<input type="hidden" name="_csrf" value="{{token}}"/>
+								</form>
+							</td>
+							&nbsp;
+							<td>
+								<form action="/shutdown" method="post">
+									<button type="submit" style="margin-bottom: 25px;"><img src="icons/logout.png" width="20px" height="20px"/></button>
+									<input type="hidden" name="_csrf" value="{{token}}"/>
+								</form>
+							</td>
+						</tr>
+					</table>
+				</div>
+				{{/showInfoUser}}
+			</div>
+		</div>
+	</nav>
+
+	<!-- Intro -->
+	<section id="carouselExampleCaptions" class="intro carousel slide bg-overlay-light h-auto">
+		<div class="carousel-inner" role="listbox">
+			<div class="carousel-item active">
+			
+				<img class="d-block img-fluid" alt="Virtuasthenics"
+					src="imgs/weightlifting.jpg"/>
+				
+				<div class="carousel-caption" style="text-align: center;">
+					<h2 class="display-4 text-white mb-2 mt-4">Mientras
+						perseveramos y resistimos, podemos conseguir todo lo que queremos</h2>
+					<p class="text-white mb-3 px-5 lead">Deja de posponerlo! Entra
+						en Virtuasthenics</p>
+						
+					<a href="/login" class="btn btn-primary btn-capsul px-4 py-2">ACCEDER</a>
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Bloque 1 -->
+	<section class="info-section">
+		<div class="container">
+			<div class="head-box text-center mb-5">
+				<h2>Quienes somos</h2>
+				<h6 class="text-underline-primary">Panel informativo</h6>
+			</div>
+			<div class="three-panel-block mt-5">
+				<div class="row">
+					<div class="col-lg-4 col-md-6 col-sm-6">
+						<div class="service-block-overlay text-center mb-5 p-lg-3">
+							<img src="icons/pesa.png" width="20px" height="20px"/>
+							<h3>Musculacion</h3>
+							<p class="px-4">Para el desarrollo o aumento del volumen de los músculos del cuerpo.</p>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 col-sm-6">
+						<div class="service-block-overlay text-center mb-5 p-lg-3">
+							<img src="icons/sentadilla.png" width="20px" height="20px"/>
+							<h3>Powerlifting</h3>
+							<p class="px-4">Sentadilla, press de banca y peso muerto.</p>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 col-sm-6">
+						<div class="service-block-overlay text-center mb-5 p-lg-3">
+							<img src="icons/calistenia.png" width="20px" height="20px"/>
+							<h3>Calistenia</h3>
+							<p class="px-4">Ejercicios físicos con el propio peso corporal.</p>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 col-sm-6">
+						<div class="service-block-overlay text-center p-lg-3">
+							<img src="icons/dance.png" width="20px" height="20px"/>
+							<h3>Dance Attack</h3>
+							<p class="px-4">Haz ejercicio moviendo el esqueleto.</p>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 col-sm-6">
+						<div class="service-block-overlay text-center p-lg-3">
+							<img src="icons/eliptica.png" width="20px" height="20px"/>
+							<h3>Spinning</h3>
+							<p class="px-4">Entrena sobre bici estática. Potencia y sincronización como clave.</p>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 col-sm-6">
+						<div class="service-block-overlay text-center p-lg-3">
+							<img src="icons/fit-boxing.png" width="20px" height="20px"/>
+							<h3>Fit Boxing</h3>
+							<p class="px-4">Disciplina que aúna los ejercicios del fitness y el boxeo</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- SCRIPTS -->
+	<script type="text/javascript">
+		$(window).scroll(function() {
+			var scroll = $(window).scrollTop();
+
+			if (scroll >= 100) {
+				$(".top-nav").addClass("light-header");
+				document.getElementById('userNameField').style.color = "#000000";
+			} else {
+				$(".top-nav").removeClass("light-header");
+				document.getElementById('userNameField').style.color = "#FFFFFF";
+			}
+		});
+	</script>
+
+</body>
+</html>

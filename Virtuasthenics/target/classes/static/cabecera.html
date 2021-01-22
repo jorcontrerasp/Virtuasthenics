@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Virtuasthenics</title>
+<link rel="stylesheet" type="text/css" href="css/inicio.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<nav class="navbar navbar-expand-md fixed-top top-nav">
+		<div class="container">
+			<a class="navbar-brand" href="/"><strong>Virtuasthenics</strong></a>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item"><a class="nav-link" href="/">Inicio</a></li>
+					<li class="nav-item"><a class="nav-link" href="/actividades">Actividades</a></li>
+					<li class="nav-item"><a class="nav-link" href="/entrenamientos">Entrenamientos</a></li>
+					<li class="nav-item"><a class="nav-link" href="/dietas">Dietas</a></li>
+					<li class="nav-item"><a class="nav-link" href="/contacto">Contacto</a></li>
+					</li>
+				</ul>
+				&nbsp;
+				&nbsp;
+				&nbsp;
+				{{#showInfoUser}}
+				<div class="navbar-user">
+					<table>
+						<tr>
+							<td>
+								<p id="userNameField" style="color: #FFFFFF; margin-bottom: 25px;">
+									<u>
+										Usuario: {{user}}
+									</u>
+								</p>
+							</td>
+							&nbsp;
+							<td>
+								<form action="/usuario" method="get">
+									<button type="submit" style="margin-bottom: 25px;"><img src="icons/user.png" width="20px" height="20px"/></button>
+									<input type="hidden" name="_csrf" value="{{token}}"/>
+								</form>
+							</td>
+							&nbsp;
+							<td>
+								<form action="/shutdown" method="post">
+									<button type="submit" style="margin-bottom: 25px;"><img src="icons/logout.png" width="20px" height="20px"/></button>
+									<input type="hidden" name="_csrf" value="{{token}}"/>
+								</form>
+							</td>
+						</tr>
+					</table>
+				</div>
+				{{/showInfoUser}}
+			</div>
+		</div>
+	</nav>
+	<!-- SCRIPTS -->
+	<script src="js/inicio.js"></script>
+
+</body>
+</html>

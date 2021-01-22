@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Title: Virtuasthenics
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: jorgecontreraspadilla
+Implementation-Vendor-Id: es.sidelab
+Build-Jdk: 1.8.0_231
+Implementation-URL: http://projects.spring.io/spring-boot/Virtuastheni
+ cs/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+

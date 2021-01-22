@@ -1,0 +1,21 @@
+body {
+	background-color: #eee;
+}
+
+.container-fluid {
+	padding: 50px;
+}
+
+.container {
+	background-color: white;
+	padding: 50px;
+	opacity:1;
+}
+
+.opaco{
+	opacity:1;
+}
+
+#title {
+	font-family: 'Lobster', cursive;;
+}
