@@ -1,0 +1,174 @@
+/*Google Fonts*/
+@import
+	url('https://fonts.googleapis.com/css?family=Montserrat:500,600,700');
+
+@import
+	url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700')
+	;
+
+@import
+	url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css")
+	;
+
+body, html {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	font-size: 1rem;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+/*
+ * OPCIONES CABECERA.
+ */
+ 
+ /*Cabecera.*/
+.top-nav {
+	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+	height: 80px;
+	transition: 0.5s ease-in;
+	-webkit-transition: 0.5s ease-in;
+	-moz-transition: 0.5s ease-in;
+}
+
+/*Link opciones de menú cabecera.*/
+.top-nav .navbar-nav li .nav-link {
+	color: #fff;
+	font-size: 14px;
+	padding: 29px 15px;
+	font-weight: 600;
+	text-transform: uppercase;
+	transition: 0.5s ease-in;
+	-webkit-transition: 0.5s ease-in;
+	-moz-transition: 0.5s ease-in;
+}
+
+/*Tab activo.*/
+.top-nav li a.nav-link:hover, .top-nav .nav-item.active a.nav-link {
+	border-bottom: 3px solid #35cbdf;
+	color: #35cbdf;
+	transition: 0.5s ease-in;
+	-webkit-transition: 0.5s ease-in;
+	-moz-transition: 0.5s ease-in;
+}
+
+/*Logotipo.*/
+.top-nav .navbar-brand {
+	font-size: 28px;
+	color: #fff;
+	font-family: 'Montserrat', sans-serif;
+}
+
+/*Cabecera iluminada al hacer scroll en la pantalla.*/
+.top-nav.light-header {
+	height: 60px;
+	background: #fff;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.23);
+	transition: 0.5s ease-in;
+	-webkit-transition: 0.5s ease-in;
+	-moz-transition: 0.5s ease-in;
+}
+
+/*Color del logotipo al hacer scroll en la pantalla.*/
+.top-nav.light-header .navbar-brand {
+	color: #212121;
+}
+
+/*Color de las opciones de menú al hacer scroll en la pantalla.*/
+.top-nav.light-header .navbar-nav li .nav-link {
+	color: #212121;
+	padding: 19px 15px;
+	transition: 0.5s ease-in;
+	-webkit-transition: 0.5s ease-in;
+	-moz-transition: 0.5s ease-in;
+}
+
+/*Color de los links de las opciones de menú de la cabecera al hacer scroll en la pantalla.*/
+.top-nav.light-header li a.nav-link:hover, .top-nav.light-header .nav-item.active a.nav-link
+	{
+	border-bottom: 3px solid #35cbdf;
+	color: #35cbdf;
+	transition: 0.5s ease-in;
+	-webkit-transition: 0.5s ease-in;
+	-moz-transition: 0.5s ease-in;
+}
+
+/* ========== Intro Header ========== */
+.intro {
+	float: left;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	height: 100%;
+	position: relative;
+	z-index: 1;
+}
+
+.intro .carousel-item {
+	height: 100vh;
+}
+
+.intro .carousel-item::before {
+	content: "";
+	background: rgba(0, 0, 0, 0.6);
+	position: absolute;
+	width: 100%;
+	height: 100vh;
+}
+
+/*Contenido de las páginas (carousel)*/
+.intro .carousel-caption {
+	top: 15%;
+}
+
+/*Contenido de las páginas*/
+.intro .index-content{
+	top: 15%;
+	text-align: left;
+}
+
+/*
+ * QUIENES SOMOS
+ */
+.info-section {
+	float: left;
+	width: 100%;
+	padding: 5rem 0;
+	position: relative;
+	z-index: 1;
+}
+
+.info-section h2 {
+	font-weight: 700;
+	font-size: 2.5rem;
+}
+
+.info-section h3 {
+	font-size: 1.4rem;
+}
+
+.info-section p {
+	font-size: 1rem;
+	line-height: 1.3rem;
+}
+
+.info-section .service-block-overlay {
+	transition: .5s;
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+}
+
+.info-section .service-block-overlay:hover {
+	background: #fff none repeat scroll 0 0;
+	border-radius: 5px;
+	box-shadow: 0 0 90px rgba(0, 0, 0, 0.1);
+	float: left;
+	margin-top: -10px;
+	position: relative;
+	width: 100%;
+	transition: .5s;
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+}
