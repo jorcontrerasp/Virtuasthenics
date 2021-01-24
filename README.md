@@ -97,7 +97,7 @@ Diagrama de navegación:
 
 <p>Comenzarán a arrancarse todos los contenedores configurados en el fichero docker-compose.yml</p>
 
-<p>Una vez arrancados se poddrá acceder a la aplicación mediante https://localhost o https://localhost:443 </p>
+<p>Una vez arrancados se podrá acceder a la aplicación mediante https://localhost o https://localhost:443 </p>
 
 <p>Y se podrán consultar las STATS del balanceador con esta url: localhost:8404/admin?stats</p>
 
